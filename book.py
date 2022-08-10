@@ -8,9 +8,10 @@ class Base:
         self.filter = filter
         self.delete = delete
 
-    def add():
-        print('New registration')
 
+    def add(file):
+        print('New registration')
+        file   
         ide = input('Enter id: ')
         name = input('Enter full name: ')
         number = input('Enter phone number: ')
@@ -41,21 +42,23 @@ class Base:
     def delete(ide):
         pass
 
-      
+            
 class Run(Base):
-    def __init__(self, add, see_all, filter, delete):
-        super().__init__(add, see_all, filter, delete)
+    def __init__(self, add, see, filter, delate):
+        super().__init__(add, see, filter, delate)
            
 if __name__ == '__main__':
     sw = True
     while sw:
 
         menu = '''What action do you wish to perform? 
+
             1. Add user 
             2. Show all users
             3. Update an user
             4. Remove all users
             5. Exit 
+
              Select an option: '''
 
         option = input(menu)
@@ -72,3 +75,5 @@ if __name__ == '__main__':
         elif option == '6':
             sw = False
             print("completed program")    
+    
+        
