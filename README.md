@@ -1,11 +1,11 @@
 # DATABASE 💻📁
 
-Este es un proyecto de una base de datos con las funciones:
+This is a database project with the functions:
 
 	Add user 
 	Show all users
-	Update an user
-	Remove all users
+	Search users by Id
+	Delete a user by user id
 	Exit 
 
 These instructions will allow you to get a copy of the project running on your local machine for development and testing purposes..

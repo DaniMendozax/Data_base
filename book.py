@@ -66,7 +66,7 @@ if __name__ == '__main__':
             1. Add user 
             2. Show all users
             3. Search users by Id
-            4. Remove all users
+            4. Delete a user by user id
             5. Exit 
 
              Select an option: '''
