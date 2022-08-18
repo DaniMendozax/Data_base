@@ -10,20 +10,20 @@ class Base:
 
     def add():
         print('New registration')
-        ide = input('Enter id: ')
-        name = input('Enter full name: ')
-        number = input('Enter phone number: ')
-        address = input('Enter adress: ')
-        entry = {"Id": ide, "Name": name, "Number": number, "Address": address}
-
-        with open('dates.json', 'r+') as file:
-            data = json.load(file)
-            data.append(entry)
-            file.seek(0)
-            json.dump(data, file)
-        
-
-        print('User added')
+        try:
+            ide = input('Enter id: ')
+            name = str(input('Enter full name: '))
+            number = int(input('Enter phone number: '))
+            address = input('Enter adress: ')
+            entry = {"Id": ide, "Name": name, "Number": number, "Address": address}
+            with open('dates.json', 'r+') as file:
+                data = json.load(file)
+                data.append(entry)
+                file.seek(0)
+                json.dump(data, file)
+            print('User added')
+        except:
+            print("**** in phone number only enter integers ****")
 
 
     def see_all():
@@ -31,8 +31,12 @@ class Base:
         print('Saved records \n')
         with open('dates.json', 'r') as fp:
             data = json.load(fp)
+            aux = ""
+            for row in data:
+                aux = aux + str(row) + "\n"
 
-            print(data)
+
+            return aux
 
     def filter(ide):
         with open("dates.json", "r+") as fp:
