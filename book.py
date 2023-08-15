@@ -44,7 +44,6 @@ def delete(ide):
     for i in range(len(obj)):
         if obj[i]["Id"] == ide:
             obj.pop(i)
-            break
     
     open("dates.json", "w").write(json.dumps(obj))
             
